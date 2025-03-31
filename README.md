@@ -7,6 +7,13 @@ Use this link to get WordNet and add to C:\Users\<YourUser>\AppData\Roaming\nltk
 
 The above is a bypass way to install wordnet as it is a large file even when zipped
 
+--------
+https://fontmeme.com/fonts/press-start-2p-font/
+This is a necessary font for the design. Install and place into C:/Windows/Fonts and install
+
+--------
+bg_music.wav must be placed in the same dir as the project. The original .wav file is not included as it's size is too large.
+
 # Reverse Akinator
 
 **Reverse Akinator** is a Python-based, GUI-driven guessing game inspired by the classic Akinator. In this game, players guess a secret word related to a selected theme. The game provides vague and helpful clues, tracks guesses, measures time with a 7‑segment–style stopwatch, and maintains a leaderboard that ranks players based on the number of guesses and elapsed time.
