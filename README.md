@@ -18,7 +18,7 @@ Additional: New sound files required, win.wav, lose.wav, guess.wav, start.wav fi
 
 # Help Therapod Remember!
 
-**Reverse Akinator** is a Python-based, GUI-driven guessing game inspired by the classic Akinator. In this game, players guess a secret word related to a selected theme. The game provides vague and helpful clues, tracks guesses, measures time with a 7‑segment–style stopwatch, and maintains a leaderboard that ranks players based on the number of guesses and elapsed time.
+**Help Therapod Remember!** is a Python-based, GUI-driven guessing game inspired by the classic Akinator. In this game, players guess a secret word related to a selected theme. The game provides vague and helpful clues, tracks guesses, measures time with a 7‑segment–style stopwatch, and maintains a leaderboard that ranks players based on the number of guesses and elapsed time.
 
 ## Features
 
@@ -51,8 +51,8 @@ Additional: New sound files required, win.wav, lose.wav, guess.wav, start.wav fi
 
 1. **Clone the Repository:**  
    ```bash
-   git clone https://github.com/yourusername/reverse-akinator.git
-   cd reverse-akinator
+   git clone https://github.com/Aksol-Jade/Help-Therapod-Remember-
+   cd Help-Therapod-Remember-
    ```
 
 2. **Install Dependencies:**  
