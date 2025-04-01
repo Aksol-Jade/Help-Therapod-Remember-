@@ -72,7 +72,7 @@ Additional: New sound files required, win.wav, lose.wav, guess.wav, start.wav fi
 To run the game, simply execute:
 
 ```bash
-python RA_GUI.py
+python RA4.py
 ```
 
 When the application starts:
@@ -100,6 +100,10 @@ reverse-akinator/
 │   ├── sad.gif
 │   └── surprise.gif
 ├── bg_music.wav          # Background music file
+├── win.wav               # Player Feedback music file
+├── lose.wav
+├── start.wav
+├── guess.wav   
 └── leaderboard.json      # JSON file storing leaderboard data (generated at runtime)
 ```
 
