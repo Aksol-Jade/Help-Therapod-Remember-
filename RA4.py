@@ -13,7 +13,7 @@ from game_logic import (
     get_helpful_clue,
     get_response_from_score,
 )
-from clue_data import THEMES
+from clue_data import THEMES, THEME_COLORS
 from sound_manager import SoundManager  # Import our sound manager subscript
 
 # Font definitions (using Courier New as fallback; install your retro font if available)
@@ -69,7 +69,7 @@ class ReverseAkinatorGUI(tk.Tk):
         self.current_volume = 0.5
         self.is_muted = False
         try:
-            pygame.mixer.music.load("bg_music.wav")
+            pygame.mixer.music.load("sounds/bg_music.wav")
             pygame.mixer.music.play(-1)  # Loop indefinitely
             pygame.mixer.music.set_volume(self.current_volume)
         except Exception as e:
@@ -104,7 +104,7 @@ class ReverseAkinatorGUI(tk.Tk):
         self.create_widgets()
         self.bind("<Configure>", self.on_window_resize)
         self.start_game()
-        
+    
     def load_emotion_images(self):
         emotions = ["angry", "fear", "happy", "love", "sad", "surprise"]
         for emotion in emotions:
@@ -122,11 +122,12 @@ class ReverseAkinatorGUI(tk.Tk):
             except EOFError:
                 pass
             self.emotion_frames[emotion] = frames
-        
+   
     def create_widgets(self):
         # Main grid: header, main UI, bottom stats.
-        self.grid_rowconfigure(2, weight=1)
+        self.grid_rowconfigure(1, weight=1)
         self.grid_columnconfigure(0, weight=1)
+        
         
         # Header Frame.
         self.header_frame = tk.Frame(self, bg=HEADER_BG, highlightthickness=4, highlightbackground=POKEMON_BORDER_COLOR)
@@ -145,6 +146,7 @@ class ReverseAkinatorGUI(tk.Tk):
         self.main_frame.grid(row=1, column=0, sticky="nsew", padx=20, pady=10)
         self.main_frame.grid_columnconfigure(0, weight=3)
         self.main_frame.grid_columnconfigure(1, weight=1)
+        self.main_frame.grid_rowconfigure(0, weight=1)
         
         # Left Panel.
         self.left_frame = tk.Frame(self.main_frame, bg=POKEMON_BOX_BG,
@@ -232,14 +234,15 @@ class ReverseAkinatorGUI(tk.Tk):
         self.submit_button.grid(row=4, column=0, sticky="w", padx=10, pady=5)
         
         # Status Text Tags.
-        self.status_text.tag_config("header", foreground=HEADER_FG, font=retro_font_large)
-        self.status_text.tag_config("guess", foreground=TEXT_FG, font=retro_font)
-        self.status_text.tag_config("score", foreground=HEADER_FG, font=(retro_font[0], 9, "italic"))
-        self.status_text.tag_config("response", foreground="#E67E22", font=retro_font)
-        self.status_text.tag_config("vague", foreground="#1ABC9C", font=retro_font)
-        self.status_text.tag_config("helpful", foreground="#9B59B6", font=retro_font)
-        self.status_text.tag_config("correct", foreground="#2ECC71", font=(retro_font[0], 11, "bold"))
-        self.status_text.tag_config("error", foreground="#E74C3C", font=retro_font)
+        # Updated text styles for better clarity
+        self.status_text.tag_config("header", foreground="#F39C12", font=("Press Start 2P", 11, "bold"))
+        self.status_text.tag_config("guess", foreground="#34495E", font=("Press Start 2P", 9, "bold"))
+        self.status_text.tag_config("score", foreground="#2980B9", font=("Press Start 2P", 8, "italic"))
+        self.status_text.tag_config("response", foreground="#D35400", font=("Press Start 2P", 9))
+        self.status_text.tag_config("vague", foreground="#16A085", font=("Press Start 2P", 9, "italic"))
+        self.status_text.tag_config("helpful", foreground="#8E44AD", font=("Press Start 2P", 9, "bold"))
+        self.status_text.tag_config("correct", foreground="#27AE60", font=("Press Start 2P", 11, "bold"))
+        self.status_text.tag_config("error", foreground="#C0392B", font=("Press Start 2P", 9, "bold"))
         
         # Right Panel: Therapod-style GIF Box.
         self.right_frame = tk.Frame(self.main_frame, bg=POKEMON_BOX_BG,
@@ -247,10 +250,18 @@ class ReverseAkinatorGUI(tk.Tk):
         self.right_frame.grid(row=0, column=1, sticky="nsew", padx=10, pady=10)
         self.right_frame.grid_propagate(False)
         self.cat_canvas = tk.Canvas(self.right_frame, bg=CAT_BG,
-                                    highlightthickness=0, width=300, height=220)
-        self.cat_canvas.pack(fill="both", expand=True)
+                                    highlightthickness=0, width=330, height=270)
+        self.cat_canvas.pack(anchor="center", pady=10) 
+        self.therapod_label = tk.Label(self.right_frame,
+            text="'Can you help Therapod?'",
+            font=retro_font_large,
+            bg=POKEMON_BOX_BG,
+            fg=HEADER_FG,
+            wraplength=300,    # Limits label width before wrapping
+            justify="center")
+        self.therapod_label.pack(pady=(5, 10))
         # Draw a thick retro pixelated border.
-        self.cat_canvas.create_rectangle(2, 2, 298, 218, outline=POKEMON_BORDER_COLOR, width=5)
+        self.cat_canvas.create_rectangle(2, 2, 328, 268, outline="black", width=6)
         # Extra pixel accents for a detailed look.
         for x in range(10, 290, 20):
             self.cat_canvas.create_rectangle(x, 215, x+10, 220, fill=POKEMON_BORDER_COLOR, outline=POKEMON_BORDER_COLOR)
@@ -271,10 +282,10 @@ class ReverseAkinatorGUI(tk.Tk):
         
         # Bottom Frame: Stopwatch and Leaderboard.
         self.bottom_frame = tk.Frame(self, bg=BG_COLOR)
-        self.bottom_frame.grid(row=2, column=0, sticky="nsew", padx=20, pady=10)
+        self.bottom_frame.grid(row=2, column=0, sticky="nsew", padx=20, pady=4)
         self.bottom_frame.grid_columnconfigure(0, weight=1)
         self.bottom_frame.grid_columnconfigure(1, weight=1)
-        self.bottom_frame.grid_rowconfigure(0, weight=1)
+        self.bottom_frame.grid_rowconfigure(2, weight=0)
         
         # Stopwatch Panel.
         self.stopwatch_frame = tk.Frame(self.bottom_frame, bg=POKEMON_BOX_BG,
@@ -459,8 +470,14 @@ class ReverseAkinatorGUI(tk.Tk):
         self.sound_manager.play_start_sound()
         self.start_animation("surprise")
         self.start_time = time.time()
+        if self.theme in THEME_COLORS:
+            top_color, bottom_color = THEME_COLORS[self.theme]
+            self.bg_image = create_gradient_image(self.winfo_width(), self.winfo_height(), top_color, bottom_color)
+            self.bg_label.config(image=self.bg_image)
+            self.bg_label.image = self.bg_image
         self.update_stopwatch()
         self.show_start_feedback()
+        self.guess_entry.focus_set()
         
     def process_guess(self, event=None):
         guess = self.guess_entry.get().strip().lower()
@@ -470,6 +487,7 @@ class ReverseAkinatorGUI(tk.Tk):
         if guess == "exit":
             self.status_text.insert(tk.END, f"\n❌ Game over! The secret word was: {self.target_word}\n", "error")
             self.sound_manager.play_lose_sound()
+            self.status_text.see(tk.END)
             return
 
         score = similarity_score(guess, self.target_word)
@@ -483,11 +501,32 @@ class ReverseAkinatorGUI(tk.Tk):
         self.status_text.insert(tk.END, f"⭐ Similarity Score: {score}%\n", "score")
 
         if score == 100:
-            self.status_text.insert(tk.END, f"\n🎉 Correct! The word was '{self.target_word}'. You took {self.guesses} guesses.\n", "correct")
             elapsed = int(time.time() - self.start_time)
-            self.status_text.insert(tk.END, f"Time: {elapsed} seconds\n", "header")
             self.sound_manager.play_win_sound()
             self.update_leaderboard(self.player_name, self.guesses, elapsed)
+
+            # Load leaderboard to determine placement
+            leaderboard = []
+            if os.path.exists(LEADERBOARD_FILE):
+                with open(LEADERBOARD_FILE, "r") as f:
+                    try:
+                        leaderboard = json.load(f)
+                    except Exception:
+                        leaderboard = []
+
+            # Sort and find rank
+            leaderboard.sort(key=lambda x: (x["guesses"], x["time"]))
+            player_rank = next((i+1 for i, entry in enumerate(leaderboard)
+                                if entry["name"] == self.player_name and
+                                entry["guesses"] == self.guesses and
+                                entry["time"] == elapsed and
+                                entry["theme"] == self.theme), "N/A")
+
+            # Display win details
+            self.status_text.insert(tk.END, f"\n🎉 Correct! The word was '{self.target_word}'.\n", "correct")
+            self.status_text.insert(tk.END, f"🏆 Theme: {self.theme}\n", "header")
+            self.status_text.insert(tk.END, f"⏱️ Time: {elapsed} seconds\n", "header")
+            self.status_text.insert(tk.END, f"🥇 Leaderboard Rank: {player_rank}\n", "header")
             self.status_text.see(tk.END)
             return
 

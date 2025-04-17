@@ -11,10 +11,10 @@ class SoundManager:
 
     def load_all_sounds(self):
         """Preload all sound effects into a dictionary."""
-        self.sounds["start"] = self.load_sound("start.wav")
-        self.sounds["win"]   = self.load_sound("win.wav")
-        self.sounds["lose"]  = self.load_sound("lose.wav")
-        self.sounds["guess"] = self.load_sound("guess.wav")
+        self.sounds["start"] = self.load_sound("sounds/start.wav")
+        self.sounds["win"]   = self.load_sound("sounds/win.wav")
+        self.sounds["lose"]  = self.load_sound("sounds/lose.wav")
+        self.sounds["guess"] = self.load_sound("sounds/guess.wav")
 
     def load_sound(self, filename):
         """Load a sound file if it exists; return None if not found."""

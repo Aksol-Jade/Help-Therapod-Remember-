@@ -34,7 +34,6 @@ THEMES = {
         "teacher", "doctor", "engineer", "chef", "artist",
         "pilot", "nurse", "firefighter", "police", "musician"
     ],
-    # New themes:
     "vehicles": [
         "car", "bicycle", "airplane", "train", "boat",
         "motorcycle", "bus", "helicopter", "submarine", "truck"
@@ -50,9 +49,56 @@ THEMES = {
     "languages": [
         "english", "spanish", "french", "mandarin", "arabic",
         "hindi", "russian", "portuguese", "japanese", "german"
-    ]
+    ],
+    # New themes:
+    "food": [
+        "pizza", "burger", "sushi", "taco", "pasta",
+        "salad", "steak", "chocolate", "ice cream", "sandwich"
+    ],
+    "movies": [
+        "inception", "titanic", "avatar", "gladiator", "matrix",
+        "jaws", "star wars", "godfather", "rocky", "casablanca"
+    ],
+    "video_games": [
+        "mario", "zelda", "minecraft", "doom", "fortnite",
+        "tetris", "halo", "pac-man", "sonic", "counter-strike"
+    ],
+    "literature": [
+        "hamlet", "1984", "dune", "gatsby", "moby dick",
+        "frankenstein", "pride", "prejudice", "crime", "punishment"
+    ],
+    "tv_shows": ["friends", "breaking bad", "the office", "game of thrones", "stranger things"],
+    "historical_figures": ["einstein", "cleopatra", "lincoln", "gandhi", "napoleon"],
+    "comics": ["batman", "superman", "spiderman", "wolverine", "iron man", "deadpool", "hulk", "wonder woman", "flash", "aquaman"],
+    "famous_landmarks": ["eiffel tower", "great wall", "pyramids", "statue of liberty", "colosseum", "taj mahal", "big ben", "sydney opera house", "christ the redeemer", "machu picchu"],
+    "music_genres": ["rock", "pop", "jazz", "classical", "hip-hop", "electronic", "country", "blues", "reggae", "metal"],
+    "cartoons": ["spongebob", "tom and jerry", "looney tunes", "rick and morty", "simpsons", "futurama", "adventure time", "regular show", "powerpuff girls", "peppa pig"],
 }
-
+# Theme-based background tint colors (light gradients)
+THEME_COLORS = {
+    "animals": ("#e9fce9", "#c2f0c2"),
+    "fruits": ("#fff0f5", "#ffd1dc"),
+    "countries": ("#e0f7fa", "#b2ebf2"),
+    "instruments": ("#f3e5f5", "#d1c4e9"),
+    "planets": ("#e3f2fd", "#bbdefb"),
+    "colors": ("#f9fbe7", "#f0f4c3"),
+    "sports": ("#fbe9e7", "#ffccbc"),
+    "jobs": ("#f1f8e9", "#dcedc8"),
+    "vehicles": ("#f0f4f8", "#cfd8dc"),
+    "mythology": ("#fff3e0", "#ffe0b2"),
+    "technology": ("#ede7f6", "#d1c4e9"),
+    "languages": ("#e8f5e9", "#c8e6c9"),
+    "food": ("#fffde7", "#fff9c4"),
+    "movies": ("#efebe9", "#d7ccc8"),
+    "video_games": ("#fce4ec", "#f8bbd0"),
+    "literature": ("#e0f2f1", "#b2dfdb"),
+    "tv_shows": ("#ede7f6", "#d1c4e9"),
+    "historical_figures": ("#fff8e1", "#ffecb3"),
+    "comics": ("#f3e5f5", "#e1bee7"),
+    "famous_landmarks": ("#e1f5fe", "#b3e5fc"),
+    "music_genres": ("#f1f8e9", "#dcedc8"),
+    "cartoons": ("#fff3e0", "#ffe0b2"),
+}
 # Clues dictionary with three unique vague and helpful clues per word.
 CLUES = {
     # Animals
@@ -1031,7 +1077,7 @@ CLUES = {
         ]
     },
 
-    # Vehicles (New)
+    # Vehicles
     "car": {
         "vague": [
             "A common mode of modern transportation.",
@@ -1153,7 +1199,7 @@ CLUES = {
         ]
     },
 
-    # Mythology (New)
+    # Mythology
     "zeus": {
         "vague": [
             "A powerful god ruling the skies.",
@@ -1275,7 +1321,7 @@ CLUES = {
         ]
     },
 
-    # Technology (New)
+    # Technology
     "computer": {
         "vague": [
             "A modern marvel that processes vast data.",
@@ -1397,7 +1443,7 @@ CLUES = {
         ]
     },
 
-    # Languages (New)
+    # Languages
     "english": {
         "vague": [
             "A global language of literature and commerce.",
@@ -1517,5 +1563,1097 @@ CLUES = {
             "Noted for its systematic grammar and extensive vocabulary.",
             "Its literary and cultural contributions are globally significant."
         ]
-    }
+    },
+
+    # Food (New)
+    "pizza": {
+        "vague": [
+            "A savory pie with endless topping possibilities.",
+            "Often associated with casual, fun gatherings.",
+            "A dish that blends cheese, sauce, and dough."
+        ],
+        "helpful": [
+            "It typically features a crispy crust with melted cheese and tomato sauce.",
+            "Known for its versatility with countless toppings.",
+            "A favorite comfort food in many cultures."
+        ]
+    },
+    "burger": {
+        "vague": [
+            "A hearty sandwich stacked with savory goodness.",
+            "Often linked to fast-food and casual dining.",
+            "A meaty delight between two buns."
+        ],
+        "helpful": [
+            "It usually includes a beef patty, cheese, and various condiments.",
+            "Popular worldwide as a filling, customizable meal.",
+            "Its combination of flavors and textures is widely enjoyed."
+        ]
+    },
+    "sushi": {
+        "vague": [
+            "A delicate dish wrapped in seaweed.",
+            "Often associated with Japanese culinary art.",
+            "A bite-sized treat with a touch of elegance."
+        ],
+        "helpful": [
+            "It typically consists of vinegared rice paired with fish or vegetables.",
+            "Known for its artful presentation and fresh ingredients.",
+            "Its flavors range from subtle to bold depending on the type."
+        ]
+    },
+    "taco": {
+        "vague": [
+            "A handheld delight with a crunchy shell.",
+            "Often associated with festive street food.",
+            "A compact meal bursting with flavor."
+        ],
+        "helpful": [
+            "It usually features seasoned meat, salsa, and vegetables wrapped in a tortilla.",
+            "Loved for its combination of spicy, tangy, and savory tastes.",
+            "A versatile dish that can be customized in many ways."
+        ]
+    },
+    "pasta": {
+        "vague": [
+            "A staple of Italian cuisine with endless shapes.",
+            "Often seen as a comfort food for many.",
+            "A dish that pairs well with a variety of sauces."
+        ],
+        "helpful": [
+            "It comes in many forms like spaghetti, penne, or fettuccine.",
+            "Often served with tomato-based, cream, or pesto sauces.",
+            "Its simplicity and heartiness make it a favorite meal."
+        ]
+    },
+    "salad": {
+        "vague": [
+            "A fresh mix of vegetables and sometimes fruits.",
+            "Often regarded as a healthy, light meal.",
+            "A dish that can be both crunchy and refreshing."
+        ],
+        "helpful": [
+            "It usually includes greens, vegetables, and a dressing.",
+            "Popular as a starter or side dish for its lightness.",
+            "Its ingredients can be varied to suit many tastes."
+        ]
+    },
+    "steak": {
+        "vague": [
+            "A robust cut of meat, often grilled to perfection.",
+            "Often linked to hearty, satisfying meals.",
+            "A dish that embodies simplicity and indulgence."
+        ],
+        "helpful": [
+            "It is typically a beef cut, best enjoyed medium-rare.",
+            "Known for its rich flavor and tender texture when cooked right.",
+            "A classic favorite for meat lovers."
+        ]
+    },
+    "chocolate": {
+        "vague": [
+            "A sweet treat with a rich, indulgent flavor.",
+            "Often associated with desserts and celebrations.",
+            "A beloved confection enjoyed worldwide."
+        ],
+        "helpful": [
+            "It can be dark, milk, or white, each with a unique taste.",
+            "Known for its smooth texture and ability to melt in your mouth.",
+            "A versatile ingredient in both sweet and savory dishes."
+        ]
+    },
+    "ice cream": {
+        "vague": [
+            "A frozen dessert that cools and delights.",
+            "Often a treat on hot summer days.",
+            "A scoop of creamy, sweet indulgence."
+        ],
+        "helpful": [
+            "It comes in many flavors and is served cold.",
+            "Known for its smooth, creamy texture and refreshing taste.",
+            "A popular dessert that can be topped with various goodies."
+        ]
+    },
+    "sandwich": {
+        "vague": [
+            "A portable meal stacked between slices of bread.",
+            "Often seen as a quick, satisfying bite.",
+            "A versatile dish that can be both simple and gourmet."
+        ],
+        "helpful": [
+            "It usually contains layers of meat, cheese, and vegetables.",
+            "Loved for its convenience and endless variations.",
+            "A common choice for lunches and picnics."
+        ]
+    },
+
+    # Movies (New)
+    "inception": {
+        "vague": [
+            "A mind-bending tale of dreams within dreams.",
+            "Often described as a cerebral journey.",
+            "A film that blurs the line between reality and illusion."
+        ],
+        "helpful": [
+            "It features complex layers of the subconscious.",
+            "Known for its innovative narrative and striking visuals.",
+            "A modern classic that challenges perception."
+        ]
+    },
+    "titanic": {
+        "vague": [
+            "A tragic romance set against an ill-fated voyage.",
+            "Often remembered for its epic scale and emotion.",
+            "A film that blends love with disaster."
+        ],
+        "helpful": [
+            "It tells the story of a doomed ship and a timeless romance.",
+            "Known for its groundbreaking visuals and emotional impact.",
+            "A cinematic epic that left a lasting legacy."
+        ]
+    },
+    "avatar": {
+        "vague": [
+            "A visually stunning journey to a distant world.",
+            "Often described as an immersive alien experience.",
+            "A film that transports viewers to another reality."
+        ],
+        "helpful": [
+            "It features groundbreaking visual effects and 3D imagery.",
+            "Known for its lush, alien landscapes and rich culture.",
+            "A movie that redefined modern filmmaking techniques."
+        ]
+    },
+    "gladiator": {
+        "vague": [
+            "An epic tale of honor and betrayal in ancient times.",
+            "Often remembered for its fierce battles and heroic spirit.",
+            "A film that captures the essence of ancient valor."
+        ],
+        "helpful": [
+            "It follows the journey of a fallen general seeking vengeance.",
+            "Known for its powerful performances and historical grandeur.",
+            "A stirring saga of power, loyalty, and redemption."
+        ]
+    },
+    "matrix": {
+        "vague": [
+            "A futuristic film questioning the nature of reality.",
+            "Often described as a blend of philosophy and action.",
+            "A movie that challenges the fabric of existence."
+        ],
+        "helpful": [
+            "It features groundbreaking special effects and complex ideas.",
+            "Known for its iconic action sequences and cyberpunk aesthetics.",
+            "A film that left a significant mark on pop culture."
+        ]
+    },
+    "jaws": {
+        "vague": [
+            "A suspenseful tale of terror beneath the waves.",
+            "Often associated with a lurking menace in the deep.",
+            "A film that made the ocean seem dangerously vast."
+        ],
+        "helpful": [
+            "It tells the story of a great white shark terrorizing a beach town.",
+            "Known for its suspenseful score and groundbreaking terror.",
+            "A classic thriller that changed the face of horror movies."
+        ]
+    },
+    "star wars": {
+        "vague": [
+            "A legendary saga of heroes in a distant galaxy.",
+            "Often remembered for its epic space battles.",
+            "A film series that redefined science fiction."
+        ],
+        "helpful": [
+            "It features a battle between good and evil across the stars.",
+            "Known for its iconic characters and groundbreaking special effects.",
+            "A cultural phenomenon that spawned a vast universe of lore."
+        ]
+    },
+    "godfather": {
+        "vague": [
+            "A tale of power, family, and betrayal.",
+            "Often seen as a deep dive into a criminal underworld.",
+            "A film that explores loyalty and legacy."
+        ],
+        "helpful": [
+            "It follows the life of a mafia family and its intricate dynamics.",
+            "Known for its profound storytelling and memorable quotes.",
+            "A timeless classic that set the standard for gangster films."
+        ]
+    },
+    "rocky": {
+        "vague": [
+            "An underdog story that inspires and uplifts.",
+            "Often remembered for its gritty determination.",
+            "A film that embodies perseverance against all odds."
+        ],
+        "helpful": [
+            "It tells the story of a boxer rising from obscurity to fame.",
+            "Known for its motivational training montages and heartfelt story.",
+            "A cinematic triumph of grit, heart, and determination."
+        ]
+    },
+    "casablanca": {
+        "vague": [
+            "A timeless romance set against war-torn backdrops.",
+            "Often remembered for its bittersweet farewell.",
+            "A film that blends love with sacrifice."
+        ],
+        "helpful": [
+            "It tells a story of lost love and sacrifice during conflict.",
+            "Known for its iconic lines and enduring emotional impact.",
+            "A classic that remains one of cinema's greatest romances."
+        ]
+    },
+
+    # Video Games (New)
+    "mario": {
+        "vague": [
+            "A plucky plumber embarking on daring adventures.",
+            "Often recognized by his red cap and mustache.",
+            "A character whose jumps have inspired generations."
+        ],
+        "helpful": [
+            "He rescues princesses and faces countless foes in a pixelated world.",
+            "Famous for his iconic power-ups and cheerful optimism.",
+            "A beloved figure in video game history."
+        ]
+    },
+    "zelda": {
+        "vague": [
+            "A legendary quest filled with puzzles and magic.",
+            "Often linked to a heroic journey in a mystical land.",
+            "A series that blends adventure with ancient lore."
+        ],
+        "helpful": [
+            "It follows a hero who battles evil to save a kingdom.",
+            "Known for its intricate dungeons and timeless soundtrack.",
+            "A hallmark of adventure and fantasy in gaming."
+        ]
+    },
+    "minecraft": {
+        "vague": [
+            "A blocky world where creativity is limitless.",
+            "Often associated with endless building and exploration.",
+            "A game that turns imagination into a virtual reality."
+        ],
+        "helpful": [
+            "Players mine resources and build structures from pixelated blocks.",
+            "Known for its survival mode and creative sandbox.",
+            "A phenomenon that sparked a generation of builders."
+        ]
+    },
+    "doom": {
+        "vague": [
+            "A fast-paced shooter set in a demon-infested realm.",
+            "Often remembered for its intense, adrenaline-fueled action.",
+            "A game that redefined the shooter genre."
+        ],
+        "helpful": [
+            "It features aggressive combat against otherworldly foes.",
+            "Known for its heavy metal soundtrack and immersive action.",
+            "A groundbreaking title that set new standards in gaming."
+        ]
+    },
+    "fortnite": {
+        "vague": [
+            "A battle royale where survival is the ultimate goal.",
+            "Often noted for its colorful, ever-changing arenas.",
+            "A game that blends construction with intense combat."
+        ],
+        "helpful": [
+            "Players build, fight, and strategize in a fast-paced world.",
+            "Known for its frequent updates and pop culture references.",
+            "A modern sensation that revolutionized multiplayer gaming."
+        ]
+    },
+    "tetris": {
+        "vague": [
+            "A simple yet captivating puzzle of falling shapes.",
+            "Often hailed as a timeless classic.",
+            "A game that challenges spatial awareness and quick thinking."
+        ],
+        "helpful": [
+            "It involves arranging tetrominoes to complete horizontal lines.",
+            "Known for its hypnotic gameplay and rhythmic falling blocks.",
+            "A minimalist puzzle that has stood the test of time."
+        ]
+    },
+    "halo": {
+        "vague": [
+            "A futuristic shooter set in a vast, interstellar war.",
+            "Often associated with epic battles and advanced armor.",
+            "A game that combines science fiction with intense action."
+        ],
+        "helpful": [
+            "It follows a super-soldier fighting against alien forces.",
+            "Known for its rich lore and multiplayer experiences.",
+            "A landmark title in the first-person shooter genre."
+        ]
+    },
+    "pac-man": {
+        "vague": [
+            "A yellow circle on a quest to gobble dots.",
+            "Often considered a pioneer in arcade gaming.",
+            "A character whose maze adventures are legendary."
+        ],
+        "helpful": [
+            "It involves navigating mazes while avoiding colorful ghosts.",
+            "Known for its simple yet addictive gameplay.",
+            "A timeless icon of the arcade era."
+        ]
+    },
+    "sonic": {
+        "vague": [
+            "A fast, blue hedgehog with a need for speed.",
+            "Often synonymous with high-octane adventures.",
+            "A game character who races through loops and obstacles."
+        ],
+        "helpful": [
+            "He uses his super speed to overcome challenges and foes.",
+            "Known for his iconic attitude and vibrant world.",
+            "A beloved mascot of the classic video game era."
+        ]
+    },
+    "counter-strike": {
+        "vague": [
+            "A tactical shooter where teamwork is key.",
+            "Often recognized for its competitive multiplayer battles.",
+            "A game that demands precision and strategy."
+        ],
+        "helpful": [
+            "It pits teams against each other in high-stakes combat scenarios.",
+            "Known for its realistic gameplay and strategic depth.",
+            "A cornerstone of competitive esports."
+        ]
+    },
+
+    # Literature (New)
+    "hamlet": {
+        "vague": [
+            "A tragic tale of revenge and introspection.",
+            "Often hailed as one of the greatest plays.",
+            "A story where doubt and destiny intertwine."
+        ],
+        "helpful": [
+            "It follows the troubled prince seeking vengeance.",
+            "Known for its profound soliloquies and dramatic tension.",
+            "A timeless work exploring themes of mortality and betrayal."
+        ]
+    },
+    "1984": {
+        "vague": [
+            "A dystopian vision of a controlled society.",
+            "Often cited as a warning against totalitarianism.",
+            "A novel that challenges freedom and truth."
+        ],
+        "helpful": [
+            "It portrays a future where surveillance and propaganda reign.",
+            "Known for its bleak outlook and powerful social commentary.",
+            "A classic that remains relevant in discussions of privacy."
+        ]
+    },
+    "dune": {
+        "vague": [
+            "An epic saga set on a desert planet.",
+            "Often described as a blend of politics and prophecy.",
+            "A story of survival and power in a harsh world."
+        ],
+        "helpful": [
+            "It explores complex themes of ecology, religion, and politics.",
+            "Known for its rich world-building and intricate plot.",
+            "A landmark in science fiction literature."
+        ]
+    },
+    "gatsby": {
+        "vague": [
+            "A tale of glamour and hidden despair.",
+            "Often set against the backdrop of lavish parties.",
+            "A story where dreams and reality collide."
+        ],
+        "helpful": [
+            "It follows a mysterious millionaire and his unfulfilled longing.",
+            "Known for its lyrical prose and timeless exploration of the American Dream.",
+            "A novel that critiques social stratification and excess."
+        ]
+    },
+    "moby dick": {
+        "vague": [
+            "A relentless pursuit on the high seas.",
+            "Often seen as a journey into obsession.",
+            "A story of man versus nature."
+        ],
+        "helpful": [
+            "It chronicles the hunt for a legendary white whale.",
+            "Known for its deep symbolism and complex narrative.",
+            "A classic work exploring the depths of human ambition."
+        ]
+    },
+    "frankenstein": {
+        "vague": [
+            "A chilling tale of creation and consequence.",
+            "Often considered a pioneer of science fiction horror.",
+            "A story where ambition and ethics collide."
+        ],
+        "helpful": [
+            "It follows a scientist whose experiment brings unintended terror.",
+            "Known for its exploration of humanity and the nature of life.",
+            "A novel that questions the boundaries of scientific exploration."
+        ]
+    },
+    "pride": {
+        "vague": [
+            "A classic narrative of love and societal expectations.",
+            "Often paired with another famous work.",
+            "A story that critiques class and romance."
+        ],
+        "helpful": [
+            "It is part of a famous duo exploring love and prejudice.",
+            "Known for its witty dialogue and social commentary.",
+            "A timeless novel examining manners and morality."
+        ]
+    },
+    "prejudice": {
+        "vague": [
+            "A counterpart to a story of love and judgment.",
+            "Often cited alongside themes of romance and class.",
+            "A narrative questioning societal norms."
+        ],
+        "helpful": [
+            "It delves into issues of bias and societal expectations.",
+            "Known for its sharp critique of social hierarchy.",
+            "A work that remains influential in discussions of equality."
+        ]
+    },
+    "crime": {
+        "vague": [
+            "A dark exploration of moral dilemmas and justice.",
+            "Often delving into the human psyche.",
+            "A narrative that questions right and wrong."
+        ],
+        "helpful": [
+            "It investigates the consequences of transgressions and guilt.",
+            "Known for its psychological depth and moral inquiry.",
+            "A novel that challenges the notion of absolute justice."
+        ]
+    },
+    "punishment": {
+        "vague": [
+            "A story of remorse, redemption, and the human condition.",
+            "Often regarded as a deep dive into personal suffering.",
+            "A narrative where every action has its consequence."
+        ],
+        "helpful": [
+            "It follows a troubled soul confronting the weight of his actions.",
+            "Known for its intense introspection and philosophical insights.",
+            "A classic work examining guilt, atonement, and morality."
+        ]
+    },
+        # TV Shows
+    "friends": {
+        "vague": [
+            "A sitcom about a close-knit group in a bustling city.",
+            "Often linked to coffee shop hangouts and witty banter.",
+            "A show about the ups and downs of friendship."
+        ],
+        "helpful": [
+            "It features six main characters navigating life in New York.",
+            "Known for its iconic Central Perk and memorable catchphrases.",
+            "A beloved series that defined a generation's humor."
+        ]
+    },
+    "breaking bad": {
+        "vague": [
+            "A dark drama of transformation and consequence.",
+            "Often seen as a descent into a dangerous world.",
+            "A story where a teacher becomes a criminal mastermind."
+        ],
+        "helpful": [
+            "It follows a high school chemistry teacher turned meth manufacturer.",
+            "Known for its intense character development and moral dilemmas.",
+            "A critically acclaimed series about power and downfall."
+        ]
+    },
+    "the office": {
+        "vague": [
+            "A quirky look at everyday office life.",
+            "Often filled with awkward moments and dry humor.",
+            "A mockumentary capturing the absurdities of work."
+        ],
+        "helpful": [
+            "It portrays the daily lives of office workers in a mundane setting.",
+            "Famous for its offbeat humor and memorable characters.",
+            "A series that redefined workplace comedy."
+        ]
+    },
+    "game of thrones": {
+        "vague": [
+            "A sprawling fantasy of power and betrayal.",
+            "Often filled with dragons, intrigue, and epic battles.",
+            "A tale of kingdoms at war."
+        ],
+        "helpful": [
+            "It follows multiple noble families vying for a throne.",
+            "Known for its complex plot twists and dramatic conflicts.",
+            "A high-fantasy series celebrated for its grand scale."
+        ]
+    },
+    "stranger things": {
+        "vague": [
+            "A nostalgic mystery set in a small town.",
+            "Often laced with supernatural secrets and retro vibes.",
+            "A tale of kids facing eerie, unknown forces."
+        ],
+        "helpful": [
+            "It involves a missing boy and otherworldly occurrences.",
+            "Known for its blend of 80s nostalgia and suspenseful storytelling.",
+            "A show that mixes friendship, mystery, and supernatural elements."
+        ]
+    },
+
+    # Historical Figures
+    "einstein": {
+        "vague": [
+            "A genius with a wild mane of hair.",
+            "Often depicted as the face of brilliance.",
+            "A man whose ideas reshaped science."
+        ],
+        "helpful": [
+            "Famous for his theory of relativity and playful demeanor.",
+            "His contributions to physics revolutionized our understanding of space and time.",
+            "A symbol of intellectual curiosity and creative thought."
+        ]
+    },
+    "cleopatra": {
+        "vague": [
+            "A regal figure from ancient times.",
+            "Often surrounded by mystery and allure.",
+            "A queen known for her captivating charm."
+        ],
+        "helpful": [
+            "Renowned for her political acumen and beauty.",
+            "She ruled ancient Egypt with both grace and power.",
+            "Her life story is one of romance, ambition, and intrigue."
+        ]
+    },
+    "lincoln": {
+        "vague": [
+            "A tall figure from a pivotal era.",
+            "A man of humble beginnings with great resolve.",
+            "An icon of unity and freedom."
+        ],
+        "helpful": [
+            "Known for abolishing slavery and guiding a nation through war.",
+            "His leadership and honesty are deeply revered.",
+            "A president whose legacy is built on emancipation and unity."
+        ]
+    },
+    "gandhi": {
+        "vague": [
+            "A peaceful visionary with profound influence.",
+            "Often seen as the embodiment of nonviolence.",
+            "A humble leader with unwavering resolve."
+        ],
+        "helpful": [
+            "Renowned for his philosophy of nonviolence and civil rights.",
+            "He inspired movements for freedom across the globe.",
+            "His legacy is centered on peaceful resistance and justice."
+        ]
+    },
+    "napoleon": {
+        "vague": [
+            "A short man with towering ambition.",
+            "Often seen as a brilliant yet controversial leader.",
+            "A figure whose military campaigns reshaped nations."
+        ],
+        "helpful": [
+            "Famous for his strategic genius and the Napoleonic Code.",
+            "His rise and fall left an indelible mark on Europe.",
+            "A leader remembered for both his conquests and his complex legacy."
+        ]
+    },
+        "spongebob": {
+        "vague": [
+            "A bubbly character living under the sea.",
+            "Often cheerful and full of quirky adventures.",
+            "A sponge with an infectious optimism."
+        ],
+        "helpful": [
+            "He lives in a pineapple and works at the Krusty Krab.",
+            "Known for his upbeat personality and memorable antics.",
+            "His world is filled with friends and silly escapades."
+        ]
+    },
+    "tom and jerry": {
+        "vague": [
+            "A classic duo locked in a timeless chase.",
+            "Often a battle of wits between predator and prey.",
+            "A pair whose rivalry is legendary."
+        ],
+        "helpful": [
+            "They engage in clever, slapstick pursuits with endless creativity.",
+            "Known for their silent, expressive humor and playful antics.",
+            "Their endless chases have entertained audiences for generations."
+        ]
+    },
+    "looney tunes": {
+        "vague": [
+            "A collection of zany characters and wild antics.",
+            "Often filled with anarchic humor and surreal gags.",
+            "A series where the absurd is celebrated."
+        ],
+        "helpful": [
+            "It features icons like Bugs Bunny and Daffy Duck.",
+            "Known for its clever wordplay and offbeat scenarios.",
+            "Its legacy has influenced animated comedy for decades."
+        ]
+    },
+    "rick and morty": {
+        "vague": [
+            "A wild, interdimensional adventure with dark humor.",
+            "Often blending sci-fi elements with absurdity.",
+            "A duo exploring bizarre alternate realities."
+        ],
+        "helpful": [
+            "It follows a genius scientist and his quirky grandson on surreal journeys.",
+            "Known for its irreverent humor and clever narrative twists.",
+            "Its mix of existential themes and comedy has redefined adult animation."
+        ]
+    },
+    "simpsons": {
+        "vague": [
+            "A long-running saga of a quirky family in a small town.",
+            "Often a satirical reflection of everyday life.",
+            "A series full of colorful characters and memorable lines."
+        ],
+        "helpful": [
+            "It portrays the adventures of the Simpson family in Springfield.",
+            "Known for its humor, catchphrases, and cultural impact.",
+            "Its legacy spans decades as a commentary on modern society."
+        ]
+    },
+    "futurama": {
+        "vague": [
+            "A futuristic romp mixing space travel with absurd comedy.",
+            "Often featuring quirky characters in a sci-fi setting.",
+            "A show that blends humor with cosmic adventures."
+        ],
+        "helpful": [
+            "It follows a delivery boy frozen in time and revived in the future.",
+            "Known for its clever satire and imaginative scenarios.",
+            "Its creative world-building makes it a cult favorite."
+        ]
+    },
+    "adventure time": {
+        "vague": [
+            "A whimsical world of magic and quirky heroes.",
+            "Often filled with surreal adventures and colorful landscapes.",
+            "A series where fantasy and humor collide."
+        ],
+        "helpful": [
+            "It follows a boy and his magical dog on epic quests.",
+            "Known for its imaginative storytelling and heartfelt moments.",
+            "Its blend of adventure and absurdity has captured a wide audience."
+        ]
+    },
+    "regular show": {
+        "vague": [
+            "A slice-of-life cartoon with unexpected twists.",
+            "Often turning mundane tasks into surreal escapades.",
+            "A show where ordinary becomes extraordinary."
+        ],
+        "helpful": [
+            "It revolves around two friends navigating bizarre, everyday challenges.",
+            "Known for its offbeat humor and quirky characters.",
+            "Its blend of the mundane with the absurd makes it uniquely entertaining."
+        ]
+    },
+    "powerpuff girls": {
+        "vague": [
+            "Three super-powered siblings saving the day with charm.",
+            "Often depicted as cute yet incredibly fierce.",
+            "A cartoon where innocence meets heroism."
+        ],
+        "helpful": [
+            "They use their unique powers to defeat villains in style.",
+            "Known for their vibrant colors and dynamic teamwork.",
+            "Their adventures blend fun, action, and a touch of sweetness."
+        ]
+    },
+    "peppa pig": {
+        "vague": [
+            "A lovable piglet with simple, playful adventures.",
+            "Often associated with early childhood fun.",
+            "A character who brings gentle humor and warmth."
+        ],
+        "helpful": [
+            "She stars in lighthearted stories that are easy to follow.",
+            "Known for her friendly demeanor and relatable antics.",
+            "Her world is filled with simple lessons and cheerful moments."
+        ]
+    },
+        "batman": {
+        "vague": [
+            "A dark vigilante in a city of shadows.",
+            "Often seen brooding on rooftops.",
+            "A hero with a mysterious past."
+        ],
+        "helpful": [
+            "He fights crime in Gotham with his intellect and gadgets.",
+            "Known for his detective skills and iconic cape.",
+            "His mission is to bring justice without superpowers."
+        ]
+    },
+    "superman": {
+        "vague": [
+            "A man of steel with extraordinary abilities.",
+            "Often seen soaring through the sky.",
+            "A beacon of hope and power."
+        ],
+        "helpful": [
+            "He hails from another planet and protects Earth.",
+            "Known for his super strength, flight, and x-ray vision.",
+            "His symbol is a shining emblem of hope."
+        ]
+    },
+    "spiderman": {
+        "vague": [
+            "A nimble hero with a knack for climbing.",
+            "Often associated with webs and quick reflexes.",
+            "A friendly neighborhood protector."
+        ],
+        "helpful": [
+            "He uses his spider-like powers to swing through the city.",
+            "Known for his witty comebacks and agile moves.",
+            "His origin involves a fateful, radioactive encounter."
+        ]
+    },
+    "wolverine": {
+        "vague": [
+            "A fierce mutant with an unbreakable spirit.",
+            "Often depicted with retractable claws.",
+            "A rugged fighter with a troubled past."
+        ],
+        "helpful": [
+            "He possesses rapid healing and razor-sharp claws.",
+            "Known for his gruff demeanor and survival instinct.",
+            "His resilience and determination define his legacy."
+        ]
+    },
+    "iron man": {
+        "vague": [
+            "A genius billionaire encased in a high-tech suit.",
+            "Often seen as a symbol of innovation.",
+            "A hero who fuses technology with charisma."
+        ],
+        "helpful": [
+            "He relies on an advanced suit powered by an arc reactor.",
+            "Known for his witty remarks and inventive gadgets.",
+            "His leadership and ingenuity inspire his allies."
+        ]
+    },
+    "deadpool": {
+        "vague": [
+            "A wisecracking antihero with a penchant for chaos.",
+            "Often breaking the fourth wall with humor.",
+            "A mercenary whose irreverence knows no bounds."
+        ],
+        "helpful": [
+            "He mixes regenerative powers with sharp, unpredictable humor.",
+            "Known for his offbeat style and over-the-top antics.",
+            "His irreverence and skill make him a cult favorite."
+        ]
+    },
+    "hulk": {
+        "vague": [
+            "A massive, green powerhouse fueled by anger.",
+            "Often seen as a force of raw strength.",
+            "A creature defined by uncontrollable fury."
+        ],
+        "helpful": [
+            "He transforms into a towering figure when provoked.",
+            "Known for his unstoppable force and iconic roar.",
+            "His internal struggle between intellect and rage is legendary."
+        ]
+    },
+    "wonder woman": {
+        "vague": [
+            "A warrior princess with unmatched determination.",
+            "Often depicted with a golden lasso and regal poise.",
+            "A symbol of strength and compassion."
+        ],
+        "helpful": [
+            "She combines combat skills with an unwavering sense of justice.",
+            "Known for her divine heritage and fearless leadership.",
+            "Her mission is to promote peace and equality."
+        ]
+    },
+    "flash": {
+        "vague": [
+            "A hero whose speed defies the limits of time.",
+            "Often a blur of red and gold in motion.",
+            "A figure who races through danger in a flash."
+        ],
+        "helpful": [
+            "He moves so quickly he seems to bend time itself.",
+            "Known for his rapid reflexes and quick wit.",
+            "His ability to outrun almost anything is his defining trait."
+        ]
+    },
+    "aquaman": {
+        "vague": [
+            "A ruler of the deep with a commanding presence.",
+            "Often linked with the mysteries of the ocean.",
+            "A hero who bridges two realms."
+        ],
+        "helpful": [
+            "He leads an underwater kingdom with wisdom and might.",
+            "Known for his ability to communicate with sea life.",
+            "His adventures span both the ocean depths and the surface world."
+        ]
+    },
+        "eiffel tower": {
+        "vague": [
+            "An iconic iron structure reaching toward the sky.",
+            "Often seen as a symbol of romance and innovation.",
+            "A landmark admired worldwide for its elegance."
+        ],
+        "helpful": [
+            "It stands in Paris, showcasing intricate lattice work.",
+            "Famous for its panoramic views and historic charm.",
+            "Its silhouette is instantly recognizable as a beacon of art."
+        ]
+    },
+    "great wall": {
+        "vague": [
+            "A sprawling barrier winding across rugged terrain.",
+            "Often viewed as an ancient marvel of defense.",
+            "A monumental structure that spans vast distances."
+        ],
+        "helpful": [
+            "It was built to safeguard an empire from invaders.",
+            "Known for its impressive length and rugged construction.",
+            "Its history reflects centuries of human effort and resilience."
+        ]
+    },
+    "pyramids": {
+        "vague": [
+            "Mysterious structures steeped in ancient lore.",
+            "Often linked to the secrets of a bygone civilization.",
+            "A wonder of the ancient world shrouded in enigma."
+        ],
+        "helpful": [
+            "They were built as tombs for Egypt's pharaohs.",
+            "Known for their precise alignment and enduring mystique.",
+            "Their grandeur and history continue to captivate visitors."
+        ]
+    },
+    "statue of liberty": {
+        "vague": [
+            "A towering symbol of freedom and welcome.",
+            "Often depicted as a gift representing hope.",
+            "A majestic figure holding aloft a radiant torch."
+        ],
+        "helpful": [
+            "It stands proudly at the entrance of New York Harbor.",
+            "Known for its powerful symbolism of liberty and democracy.",
+            "Its green patina and design inspire awe and unity."
+        ]
+    },
+    "colosseum": {
+        "vague": [
+            "An ancient arena echoing with the roar of crowds.",
+            "Often seen as a relic of epic gladiatorial contests.",
+            "A monumental structure that speaks of bygone battles."
+        ],
+        "helpful": [
+            "It remains a testament to Roman engineering and culture.",
+            "Famous for its architectural grandeur and historical depth.",
+            "Its ruins tell tales of glory and the harsh realities of combat."
+        ]
+    },
+    "taj mahal": {
+        "vague": [
+            "A breathtaking monument of love and art.",
+            "Often described as a marble masterpiece.",
+            "A symbol of eternal romance and exquisite beauty."
+        ],
+        "helpful": [
+            "It was built as a tribute to undying love in India.",
+            "Known for its intricate carvings and reflective pools.",
+            "Its symmetry and elegance make it one of the world’s most admired structures."
+        ]
+    },
+    "big ben": {
+        "vague": [
+            "A historic clock tower that marks the passage of time.",
+            "Often more famous for its chimes than its appearance.",
+            "A symbol of precision and timeless tradition."
+        ],
+        "helpful": [
+            "It stands as an iconic landmark in London.",
+            "Known for its resonant bell and classic design.",
+            "Its chimes have echoed across the city for generations."
+        ]
+    },
+    "sydney opera house": {
+        "vague": [
+            "A striking architectural marvel by the water.",
+            "Often celebrated for its sail-like design.",
+            "A cultural landmark with an instantly recognizable silhouette."
+        ],
+        "helpful": [
+            "It serves as a premier venue for the performing arts in Australia.",
+            "Known for its innovative design and artistic impact.",
+            "Its unique roof shells make it a modern icon of architecture."
+        ]
+    },
+    "christ the redeemer": {
+        "vague": [
+            "A monumental statue overlooking a vibrant city.",
+            "Often depicted with outstretched arms in a welcoming pose.",
+            "A symbol of faith and hope seen from above."
+        ],
+        "helpful": [
+            "It towers over Rio de Janeiro as a beacon of peace.",
+            "Known for its art deco style and spiritual symbolism.",
+            "Its grand scale and outstretched arms inspire unity."
+        ]
+    },
+    "machu picchu": {
+        "vague": [
+            "An ancient citadel perched high in the mountains.",
+            "Often shrouded in mist and mystery.",
+            "A lost city that speaks of a storied past."
+        ],
+        "helpful": [
+            "It is an Incan ruin nestled in the Andes of Peru.",
+            "Known for its breathtaking terraces and enigmatic history.",
+            "Its remote location and stunning architecture captivate visitors."
+        ]
+    },
+        "rock": {
+        "vague": [
+            "A genre known for its raw, electrifying energy.",
+            "Often driven by powerful guitar riffs.",
+            "A style that shakes the ground with its sound."
+        ],
+        "helpful": [
+            "It features strong beats and electrifying solos.",
+            "Famous for energetic live performances and anthemic choruses.",
+            "Its rebellious spirit has defined generations of music."
+        ]
+    },
+    "pop": {
+        "vague": [
+            "A catchy genre that appeals to the masses.",
+            "Often upbeat and instantly memorable.",
+            "A style that lingers in your mind all day."
+        ],
+        "helpful": [
+            "It emphasizes memorable hooks and danceable beats.",
+            "Known for its widespread radio play and chart-topping hits.",
+            "Its simplicity and appeal have made it a global phenomenon."
+        ]
+    },
+    "jazz": {
+        "vague": [
+            "A smooth genre full of improvisation and soul.",
+            "Often characterized by intricate rhythms and cool vibes.",
+            "A style that flows like a spontaneous conversation."
+        ],
+        "helpful": [
+            "It features complex chords and spontaneous solos.",
+            "Known for its expressive improvisation and rich history.",
+            "Its fusion of structure and freedom creates a uniquely soulful sound."
+        ]
+    },
+    "classical": {
+        "vague": [
+            "A timeless genre of orchestral masterpieces.",
+            "Often associated with grand symphonies and elegant compositions.",
+            "A style that has withstood the test of time."
+        ],
+        "helpful": [
+            "It encompasses compositions from multiple eras and forms.",
+            "Known for its structured harmonies and emotive themes.",
+            "Its works are celebrated in concert halls worldwide."
+        ]
+    },
+    "hip-hop": {
+        "vague": [
+            "A rhythmic genre that blends beats with storytelling.",
+            "Often characterized by sharp lyrics and dynamic flow.",
+            "A style that reflects urban culture and creativity."
+        ],
+        "helpful": [
+            "It features strong, punchy beats and spoken word elements.",
+            "Known for its cultural impact and expressive lyricism.",
+            "Its influence spans decades and continually evolves with its community."
+        ]
+    },
+    "electronic": {
+        "vague": [
+            "A futuristic genre built on synthesized sounds.",
+            "Often associated with digital beats and dance floors.",
+            "A style that pulses with innovation and energy."
+        ],
+        "helpful": [
+            "It relies on electronic instruments and computer-based production.",
+            "Known for its ability to create immersive, pulsating soundscapes.",
+            "Its diverse subgenres include techno, house, and trance."
+        ]
+    },
+    "country": {
+        "vague": [
+            "A genre that tells stories of life on the open road.",
+            "Often infused with heartfelt lyrics and acoustic charm.",
+            "A style that reflects rural traditions and simplicity."
+        ],
+        "helpful": [
+            "It emphasizes storytelling, simple melodies, and twangy vocals.",
+            "Famous for its narrative songs and relatable themes.",
+            "Its honest, straightforward style resonates with many."
+        ]
+    },
+    "blues": {
+        "vague": [
+            "A soulful genre that speaks of hardship and hope.",
+            "Often characterized by expressive guitar riffs and emotional vocals.",
+            "A style that channels deep, heartfelt emotions."
+        ],
+        "helpful": [
+            "It typically follows a 12-bar structure and expressive solos.",
+            "Known for its raw emotion and influence on other music styles.",
+            "Its melancholic yet healing sound has touched many lives."
+        ]
+    },
+    "reggae": {
+        "vague": [
+            "A laid-back genre with a rhythmic, offbeat groove.",
+            "Often associated with island vibes and social messages.",
+            "A style that radiates chill, positive energy."
+        ],
+        "helpful": [
+            "It features syncopated rhythms, prominent bass, and uplifting lyrics.",
+            "Known for its role in promoting peace and unity.",
+            "Its distinctive sound has made it a symbol of Caribbean culture."
+        ]
+    },
+    "metal": {
+        "vague": [
+            "An intense genre with powerful, aggressive sound.",
+            "Often characterized by heavy guitar riffs and dynamic drumming.",
+            "A style that pushes musical limits with raw energy."
+        ],
+        "helpful": [
+            "It is marked by distorted guitars, pounding drums, and vigorous vocals.",
+            "Known for its passionate fan base and diverse subgenres.",
+            "Its bold, cathartic sound is both challenging and exhilarating."
+        ]
+    },
+
 }
