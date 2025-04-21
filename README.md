@@ -4,6 +4,9 @@
 
 ---
 
+<img src="images/image.png" alt="Diagram" width="400"/>
+
+
 ## 🛠️ New & Updated Features (2025 Edition)
 
 - **🚀 Enhanced Layout:**
