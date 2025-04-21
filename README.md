@@ -4,7 +4,7 @@
 
 ---
 <div align="center">
-  <img src="images/diagram.png" alt="Diagram" width="520"/>
+  <img src="images/image.png" alt="Diagram" width="520"/>
 </div>
 
 ## 🛠️ New & Updated Features (2025 Edition)
