@@ -3,9 +3,9 @@
 **Help Therapod Remember!** is a retro-inspired, Python-based, GUI-driven guessing game where you help **Therapod**, a quirky, animated caricature inspired by a physical thesis project, remember a secret word. Based on themes like animals, technology, and mythology, players receive increasingly helpful clues to guide their guesses.
 
 ---
-
-<img src="images/image.png" alt="Diagram" width="400"/>
-
+<div align="center">
+  <img src="images/diagram.png" alt="Diagram" width="520"/>
+</div>
 
 ## 🛠️ New & Updated Features (2025 Edition)
 
@@ -107,6 +107,50 @@ Help-Therapod-Remember/
 ```
 
 ---
+
+## GUI structure:
+```
+ReverseAkinatorGUI (tk.Tk)
+├── __init__()
+│   ├── GUI setup & window config
+│   ├── pygame mixer init (background music)
+│   ├── game state vars (theme, guesses, time, etc.)
+│   ├── emotion frames setup
+│   ├── SoundManager instance
+│   ├── create_widgets()
+│   └── start_game()
+│
+├── load_emotion_images()          # Loads all emotion .gif frames from /face
+├── create_widgets()               # Builds the entire GUI layout
+│   ├── header_frame (title, subtitle)
+│   ├── left_frame
+│   │   ├── name_frame
+│   │   ├── top_controls (theme selector, volume, mute)
+│   │   ├── status_text (game log box)
+│   │   ├── guess_frame (user input)
+│   │   └── submit_button
+│   ├── right_frame (Therapod GIF box)
+│   └── bottom_frame
+│       ├── stopwatch_frame
+│       └── leaderboard_frame
+│           └── filter_frame
+│
+├── update_volume()                # Volume slider
+├── toggle_mute()                  # Mute toggle
+├── update_stopwatch()            # Timer logic
+├── update_leaderboard_display()  # Filter + display leaderboard
+├── update_leaderboard()          # Append new score
+├── on_window_resize()            # Resize handler (also updates animation)
+│
+├── choose_emotion(score)         # Returns emotion string by score
+├── start_animation(emotion)      # Loads and starts animation
+├── animate()                     # Frame cycling for GIFs
+│
+├── start_game()                  # Game reset + secret word pick
+├── process_guess(event=None)     # Main game logic for scoring + feedback
+├── show_start_feedback()         # “Game Started!” popup
+└── mainloop()
+```
 
 ## Future Ideas
 - LLM integration with LangChain for AI-generated hints
